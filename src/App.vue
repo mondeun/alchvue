@@ -1,18 +1,18 @@
 <template lang="pug">
   #app
-    navigation
+    app-navigation
     img(src="./assets/logo.png")
     router-view
 </template>
 
-<script>
-import Navigation from './components/common/Navigation'
+<script type="text/javascript">
+import AppNavigation from './components/common/AppNavigation'
 
 export default {
   name: 'app',
 
   components: {
-    Navigation
+    AppNavigation
   }
 }
 </script>
