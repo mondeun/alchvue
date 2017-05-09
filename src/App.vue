@@ -1,13 +1,19 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
-  </div>
+<template lang="pug">
+  #app
+    navigation
+    img(src="./assets/logo.png")
+    router-view
 </template>
 
 <script>
+import Navigation from './components/common/Navigation'
+
 export default {
-  name: 'app'
+  name: 'app',
+
+  components: {
+    Navigation
+  }
 }
 </script>
 
@@ -18,6 +24,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
