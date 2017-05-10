@@ -1,6 +1,6 @@
 <template lang="pug">
-  div
-    h2 Hello
+  div(style="background-color: red")
+    p Hello
 </template>
 
 <script>

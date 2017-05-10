@@ -4,10 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/index'
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.css'
+import Vuetify from 'vuetify'
 
-Vue.use(VueMaterial)
+Vue.use(Vuetify)
 
 Vue.config.productionTip = false
 

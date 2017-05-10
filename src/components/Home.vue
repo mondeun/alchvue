@@ -1,5 +1,6 @@
 <template lang="pug">
   .home
+    img(src="../assets/logo.png")
     h1.md-display-3 {{ msg }}
     h2 Essential Links
     ul
@@ -11,7 +12,7 @@
       li: a(href='http://vuex.vuejs.org/' target='_blank') vuex
       li: a(href='http://vue-loader.vuejs.org/' target='_blank') vue-loader
       li: a(href='https://github.com/vuejs/awesome-vue' target='_blank') awesome-vue
-      li: a(href='https://vuematerial.github.io' target='_blank') Vue Material
+      li: a(href='https://vuetifyjs.com/' target='_blank') Vuetify
 </template>
 
 <script type="text/javascript">
@@ -27,6 +28,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.home {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
 h1, h2 {
   font-weight: normal;
 }
