@@ -1,6 +1,6 @@
 <template lang="pug">
   .home
-    h1 {{ msg }}
+    h1.md-display-3 {{ msg }}
     h2 Essential Links
     ul
       li: a(href='https://vuejs.org' target='_blank') Core Docs
@@ -19,7 +19,7 @@ export default {
   name: 'Home',
   data () {
     return {
-      msg: 'Welcome to Alchemy Cines'
+      msg: 'Alchemy Cines'
     }
   }
 }
