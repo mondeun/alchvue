@@ -1,8 +1,8 @@
 <template lang="pug">
   v-app#app(left-fixed-sidebar sidebar-under-toolbar scroll-y)
-    v-toolbar.deep-purple.darken-4
+    v-toolbar.blue-grey.darken-3
       v-toolbar-side-icon.hidden-lg-and-up(@click.native.stop="toggleSidebar = !toggleSidebar")
-      v-toolbar-title.hidden-sm-and-down Alchemy Cines
+      v-toolbar-title.hidden-sm-and-down {{ msg }}
       v-spacer.hidden-sm-and-down
       v-text-field(append-icon="search" label="Search..." hide-details single-line dark style="flex: 0.5em")
       a(href="https://gitlab.com/alchemy-cines" target="_blank")
@@ -29,21 +29,14 @@
 </template>
 
 <script type="text/javascript">
-import AppNavigation from './components/common/AppNavigation'
-import SideNavigation from './components/common/SideNavigation'
-
 export default {
   name: 'app',
 
   data () {
     return {
-      toggleSidebar: Boolean
+      toggleSidebar: Boolean,
+      msg: 'Alchemy Cines'
     }
-  },
-
-  components: {
-    AppNavigation,
-    SideNavigation
   }
 }
 </script>

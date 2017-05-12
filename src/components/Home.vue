@@ -13,15 +13,34 @@
       li: a(href='http://vue-loader.vuejs.org/' target='_blank') vue-loader
       li: a(href='https://github.com/vuejs/awesome-vue' target='_blank') awesome-vue
       li: a(href='https://vuetifyjs.com/' target='_blank') Vuetify
+    div
+      v-card(v-for="m in movies" :key="m.id")
+        v-card-row.green
+          v-card-title.white--text {{ m.title }}
+        v-card-text
+          v-card-row(height="75px")
+            div
+              p {{ m.year }} - {{ m.score }}
 </template>
 
 <script type="text/javascript">
+import { mapGetters, mapActions } from 'Vuex'
+
 export default {
   name: 'Home',
   data () {
     return {
       msg: 'Alchemy Cines'
     }
+  },
+  computed: mapGetters({
+    movies: 'allMovies'
+  }),
+  methods: mapActions([
+    'addMovieToLibrary'
+  ]),
+  created () {
+    this.$store.dispatch('getAllMovies')
   }
 }
 </script>
