@@ -5,9 +5,9 @@
       v-toolbar-title.hidden-sm-and-down {{ msg }}
       v-spacer.hidden-sm-and-down
       v-text-field(append-icon="search" label="Search..." hide-details single-line dark style="flex: 0.5em")
-      a(href="https://gitlab.com/alchemy-cines" target="_blank")
-        v-btn(icon dark)
-          v-icon code
+      v-toolbar-items
+        v-toolbar-item(router href="/login") Log in
+        v-toolbar-item(router href="/register") Sign up
 
     v-sidebar.mt-0(v-model="toggleSidebar" fixed)
       v-list
@@ -24,8 +24,7 @@
 
     main
       v-content
-        v-container(fluid)
-          router-view
+        router-view
 </template>
 
 <script type="text/javascript">
