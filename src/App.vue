@@ -12,10 +12,10 @@
     v-sidebar.mt-0(v-model="toggleSidebar" fixed)
       v-list
         v-list-item
-          v-list-tile(router=true href="/" ripple)
+          v-list-tile(router href="/" ripple)
             v-list-tile-title Home
         v-list-item
-          v-list-tile(router=true href="/about" ripple)
+          v-list-tile(router href="/about" ripple)
             v-list-tile-title About
         v-divider
         v-list-item
@@ -31,11 +31,9 @@
 export default {
   name: 'app',
 
-  data () {
-    return {
-      toggleSidebar: Boolean,
-      msg: 'Alchemy Cines'
-    }
-  }
+  data: () => ({
+    toggleSidebar: Boolean,
+    msg: 'Alchemy Cines'
+  })
 }
 </script>

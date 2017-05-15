@@ -2,12 +2,10 @@
   v-card
     v-card-row.blue-grey.darken-1
       v-card-title.white--text {{ this.movie.title }}
-      <v-btn icon class="blue--text text--lighten-2">
-        <v-icon>thumb_up</v-icon>
-      </v-btn>
-      <v-btn icon class="red--text text--lighten-2">
-        <v-icon>thumb_down</v-icon>
-      </v-btn>
+      v-btn.blue--text.text--lighten-2(icon)
+        v-icon thumb_up 
+      v-btn.red--text.text--lighten-2(icon)
+        v-icon thumb_down
     v-card-text
       v-card-row(height="75px")
         div
@@ -17,7 +15,7 @@
 
 <script type="text/javascript">
 export default {
-  name: 'MovieCard',
+  name: 'movieCard',
   props: [
     'movie'
   ]

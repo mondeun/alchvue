@@ -1,20 +1,19 @@
 <template lang="pug">
   v-container.fluid
-    .register
+    div
       v-row
         v-col(sm12)
           h2 Signup
-        v-col(sm4)
-          form
-            v-text-field(label="User name" required)
-            v-text-field(label="Password" type="password" required)
-            v-text-field(label="Repeat Password" required)
-            v-btn(primary outline) Hello
+        form
+          v-text-field(label="User name" required)
+          v-text-field(label="Password" type="password" required)
+          v-text-field(label="Repeat Password" required)
+          v-btn(primary outline) Register
 </template>
 
 <script type="text/javascript">
 export default {
-  name: 'Register'
+  name: 'register'
 }
 </script>
 

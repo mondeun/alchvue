@@ -16,7 +16,7 @@
         li: a(href='https://vuetifyjs.com/' target='_blank') Vuetify
       v-row
         v-col(sm4 v-for="m in movies" :key="m.id")
-          movie-card(:movie="m")
+          movie-card.movie-card(:movie="m")
 </template>
 
 <script type="text/javascript">
@@ -24,7 +24,8 @@ import { mapGetters, mapActions } from 'Vuex'
 import MovieCard from '../components/MovieCard'
 
 export default {
-  name: 'Home',
+  name: 'home',
+  
   data: () => ({
     msg: 'Alchemy Cines'
   }),
@@ -52,6 +53,10 @@ export default {
 
 .home {
   text-align: center;
+}
+
+.movie-card {
+  margin-bottom: 15px;
 }
 
 h1, h2 {
